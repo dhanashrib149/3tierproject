@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An animated, beginner-friendly guide to AWS three-tier architecture and the VPC network around it.">
+  <meta name="theme-color" content="#0b1730">
+  <title>3-Tier Visual — AWS Architecture, Made Simple</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="3-Tier Visual home">
+      <span class="brand-mark">3</span>
+      <span>3-Tier <b>Visual</b></span>
+    </a>
+    <div class="topline">AWS architecture, explained like a neighbourhood</div>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle colour theme">Toggle theme</button>
+  </header>
+
+  <main class="page-shell">
+    <aside class="sidebar" aria-label="Architecture lesson steps">
+      <div class="side-intro">
+        <p class="eyebrow">A FRIENDLY AWS STORY</p>
+        <h1>Build Ravi’s online shop, one step at a time.</h1>
+        <p>Think of cloud infrastructure as a gated society. Each step adds a useful part to Ravi’s shop.</p>
+      </div>
+      <nav id="stepList" class="step-list" aria-label="Choose a step"></nav>
+      <div class="controls">
+        <button class="control-button primary-control" id="autoPlay" type="button" aria-pressed="false">▶ Auto-play</button>
+        <button class="control-button" id="reset" type="button">↺ Reset</button>
+      </div>
+      <section class="legend" aria-label="Moving object legend">
+        <h2>Moving objects</h2>
+        <div class="legend-row"><span>✉️</span><span>Visitor request</span></div>
+        <div class="legend-row"><span>💾</span><span>Data / database write</span></div>
+        <div class="legend-row"><span>🔁</span><span>Database copy</span></div>
+        <div class="legend-row"><span>📦</span><span>Software update</span></div>
+        <div class="legend-row"><span>😈</span><span>Intruder</span></div>
+        <div class="legend-row"><span>🔒</span><span>Office VPN</span></div>
+        <div class="legend-row"><span>🤝</span><span>Partner connection</span></div>
+      </section>
+      <p class="side-foot">A learning diagram — no AWS resources are created.</p>
+    </aside>
+
+    <section class="lesson" aria-label="Three-tier architecture visualisation">
+      <div class="diagram-heading">
+        <div>
+          <p class="eyebrow">ARCHITECTURE MAP</p>
+          <h2 id="diagramTitle">Ravi’s cloud neighbourhood</h2>
+        </div>
+        <span class="progress" id="progress">STEP 1 OF 9</span>
+      </div>
+      <div class="diagram-viewport" tabindex="0" aria-label="Scrollable architecture diagram">
+        <div id="diagramMount" class="diagram-mount"></div>
+      </div>
+      <article class="caption-card" aria-live="polite">
+        <div class="caption-top">
+          <span class="caption-number" id="captionNumber">01</span>
+          <div><p class="eyebrow">CURRENT STEP</p><h2 id="captionTitle">The fenced plot</h2></div>
+        </div>
+        <div class="caption-grid">
+          <div><h3>In plain words</h3><p id="plainWords"></p></div>
+          <div><h3>Technical name</h3><p id="technicalName"></p></div>
+          <div><h3>Watch the picture</h3><p id="watchPicture"></p></div>
+        </div>
+        <div class="caption-actions">
+          <button id="previousStep" class="nav-button" type="button" disabled>← Previous</button>
+          <button id="nextStep" class="nav-button next-button" type="button">Next step →</button>
+        </div>
+      </article>
+    </section>
+  </main>
+  <footer class="footer">3-Tier Visual · Beginner-friendly AWS architecture learning · Built as a static GitHub Pages project</footer>
+  <script src="js/app.js"></script>
+</body>
+</html>
